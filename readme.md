@@ -1,0 +1,4 @@
+# RedactIt 
+Inspired by the [Azure-Mask](https://github.com/clarkio/azure-mask) extension, this browser extension will do a best effort attempt to find and redact specified text found on web pages. The intention of the extension is to make it easier to do screen recordings without revealing sensitive, personal, account information that may show up on screen. It will run on any website to which you give it permission and can redact any specified text.
+
+Due to advancements in AI being able to reverse blurred text, this extension currently makes the text transparent rather than blurred. I may offer blurred vs transparent as an option in future releases.

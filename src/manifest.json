@@ -1,0 +1,39 @@
+{
+	"name": "RedactIt",
+	"version": "0.0.0.1",
+	"description": "An extension that does a best effort redaction of specified text on pages.",
+	"icons": {
+		"16": "icons/redactit16x16.png",
+		"32": "icons/redactit32x32.png",
+		"48": "icons/redactit48x48.png",
+		"128": "icons/redactit128x128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"16": "icons/redactit16x16.png",
+			"32": "icons/redactit32x32.png"
+		},
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"tabs",
+		"storage"
+	],
+	"optional_permissions": [
+		"*://*/*"
+	],
+	"content_scripts": [
+		{
+			"js": [
+				"redact.js"
+			],
+			"matches": [
+				"*://*/*"
+			],
+			"run_at": "document_idle",
+			"all_frames": true,
+			"match_about_blank": true
+		}
+	],
+	"manifest_version": 2
+}

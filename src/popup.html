@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>RedactIt</title>
+	<style>
+		body {
+			min-width: 500px;
+			font-size: 15px;
+		}
+
+		input {
+			margin: 5px;
+			outline: none;
+		}
+
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="requestPermissionsDiv">
+		<button id="requestPermissionsBtn">Grant Permissions (<span id="originBtnSpan"></span>)</button>
+	</div>
+	<div id="managePermissionsDiv" class="hidden">
+		<h2>RedactIt (<span id="originTitleSpan"></span>)</h2>
+		<ul id="redactedList"></ul>
+
+		<form id="form">
+			<input type="text" name="newRedaction" id="newRedaction">
+			<br>
+			<input type='submit' value='Add' id='addRedaction'>
+			<button id="clearRedactions">Clear</button>
+		</form>
+	</div>
+</body>
+<script src="popup.js"></script>
+
+</html>
